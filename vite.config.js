@@ -7,8 +7,22 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [
     vue({
-      templateCompilerOptions,
+      ...templateCompilerOptions,
     }),
     tailwindcss(),
   ],
+  resolve: {
+    dedupe: ["three"],
+    alias: {
+      three: "three",
+    },
+  },
+  optimizeDeps: {
+    include: ["three", "@tresjs/core", "@tresjs/cientos"],
+    esbuildOptions: {
+      alias: {
+        three: "three",
+      },
+    },
+  },
 });
