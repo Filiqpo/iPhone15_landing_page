@@ -190,7 +190,7 @@ const handleClick = () => {
       >
         <div class="video-carousel_container">
           <div
-            class="w-full h-full flex-center rounded-3xl overflow-hidden bg-black"
+            class="w-full h-full flex items-center justify-center rounded-3xl overflow-hidden bg-black"
           >
             <video
               id="video"
@@ -227,9 +227,9 @@ const handleClick = () => {
       </div>
     </div>
 
-    <div class="relative flex-center mt-10">
+    <div class="relative flex items-center justify-center mt-10">
       <div
-        class="flex-center py-5 px-7 bg-[#42424570] backdrop-blur rounded-full"
+        class="flex items-center justify-center py-5 px-7 bg-[#42424570] backdrop-blur rounded-full"
       >
         <span
           v-for="(_, i) in videoRef"
@@ -253,10 +253,11 @@ const handleClick = () => {
       </div>
 
       <button
-        class="ml-4 p-4 rounded-full bg-[#42424570] backdrop-blur flex-center"
+        class="ml-4 p-4 rounded-full bg-[#42424570] backdrop-blur flex items-center justify-center"
         @click="handleClick"
       >
         <img
+          class="cursor-pointer"
           :src="isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg"
           :alt="isLastVideo ? 'replay' : !isPlaying ? 'play' : 'pause'"
         />

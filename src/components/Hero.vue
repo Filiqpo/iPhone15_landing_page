@@ -26,7 +26,7 @@ onUnmounted(() => {
 
 <template>
   <section class="w-full nav-height bg-black relative">
-    <div class="h-5/6 w-full flex-center flex-col">
+    <div class="h-5/6 w-full flex items-center justify-center flex-col">
       <p id="hero" class="hero-title">iPhone 15 Pro</p>
       <div class="md:w-10/12 w-9/12">
         <video class="pointer-events-none" autoplay muted :playsinline="true">
